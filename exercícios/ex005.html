@@ -12,11 +12,16 @@
     <p>Aqui vai o resultado</p>
 
     
-    <div>Clique Aqui</div>
+    <div id="msg">Clique Aqui</div>
 
     <script>
-        var p1 = window.document.getElementsByTagName('p'){1}
-        p1.style.color = 'blue'
+
+        window.document.body.style.background = 'purple'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background= 'blue'
+        d.innerText = 'Olá!'
     </script>
+
 </body>
 </html>
