@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #EEC0C6;
+        }
+
+        h1,footer{
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer{
+        margin-top: 10px;
+        }
+
+        main{
+            background-color: white;
+            margin: auto;
+            width: 400px;
+            height: 400px;
+        }
+
+        #js{
+            padding-top: 5px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        #img{
+            margin: auto;
+            width: 250px;
+            height: 250px; 
+            border-radius: 50%;
+            background-position: center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <main>
+        <div id="js">
+            
+        </div>
+        <div id="img">
+
+        </div>
+    </main>
+    <footer>@william codess</footer>
+
+    <script>
+        var img = window.document.getElementById('img')
+        var agora = new Date()
+        var hora = agora.getHours()
+        var min = agora.getMinutes()
+        var jscript = window.document.getElementById('js')
+
+        if(hora >= 6 && hora < 12){
+            jscript.innerHTML =(`<p>Bom dia! agora são ${hora}:${min}.</p>`)
+        }else if(hora >= 12 && hora < 18){
+            jscript.innerHTML =(`<p>Bom Tarde! agora são ${hora}:${min}.</p>`)
+        }
+        else if(hora >= 18 && hora <= 24){
+            jscript.innerHTML =(`<p>Boa Noite! agora são ${hora}:${min}.</p>`)
+        }
+
+        if(hora >= 6 && hora <= 12){
+            img.style.backgroundImage = "url('https://media.istockphoto.com/id/185067762/pt/foto/majestoso-nascer-do-sol-sobre-as-montanhas.jpg?s=612x612&w=0&k=20&c=tbSl_iUF3pMnifw8sj9QTnKzs_mQ4BiP5hNRZCka5qo=')"
+        } else if(hora >= 17 && hora <= 24 ){
+            img.style.backgroundImage = "url('https://i.pinimg.com/736x/b1/a9/46/b1a946059aff358939c22e1d160ecbd5--beautiful-night-beautiful-moon.jpg')"
+        }
+    </script>
+</body>
+</html>
