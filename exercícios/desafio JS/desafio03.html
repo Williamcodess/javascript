@@ -4,72 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de idade</title>
-    <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(62, 62, 218);
-        }
-
-        h1{
-            margin-top: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        main{
-            background-color: white;
-            padding: 10px;
-            margin: auto;
-            width: 400px;
-            height: 400px;
-        }
-
-        input{
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-    </style>
+    <title>Verificado de imagem</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h1>Verificador de idade</h1>
-    <main>
-            <p>
-                <label for="iano">Ano de Nascimento:</label>
-                <input type="number" name="ano" id="iano" id="iano">
-            </p>
+    <!--Estrutura do site
+    header
+    /header
+    section
+        div
+        div
+    /section
+    footer
+        p
+    /footer
+    script
+    -->
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <label for="txtano">Ano de Nascimento:</label>
+            <input type="number" name="txtano" id="txtano" minlength="0">
             <p>
                 sexo:
-                <input type="radio" name="sexo" id="imas">
-                <label for="imas">Masculino</label>
-                <input type="radio" name="sexo" id="ifem">
-                <label for="ifem">Feminino</label>
+                <input type="radio" name="radsex" id="mas" required >
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem" required checked>
+                <label for="fem" >Feminino</label>
             </p>
             <p>
-                <input type="button" value="Verificar" onclick="clicar()">
+                <input type="button" value="Verificar" onclick="verificar()" >
             </p>
+        </div>
+                
+        <div id="rest">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
 
-            <p>
-                Preencha os dados acima para ver
-                 o resultado!
-            </p>
-            <p>
-                <label for="iidade">Você tem:</label>
-                <output id="iidade">0</output>
-            </p>
-    </main>
-
-    <script>
-        function clicar() {
-            var veri = new Date().getFullYear()
-            
-            iidade.innerHTML = Number (veri) - Number(iano.value)
-        }
-    </script>
+    <footer>
+        <p>Feito por william codess</p>
+    </footer>
+    <script src="javaScript.js"></script>
 </body>
 </html>
