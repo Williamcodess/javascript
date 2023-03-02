@@ -21,6 +21,20 @@ section{
 
 }
 
+#rest{
+    padding: 10px;
+}
+
+#immg{
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 footer{
     font-weight: bold;
     color: white;
