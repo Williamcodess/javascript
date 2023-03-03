@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+    <header>
+        <h1>Super Contador</h1>
+    </header>
+    <main>
+        <div id="contagem">
+            <p>
+                <label for="iinicio">Inicio:</label>
+                <input type="number" name="inicio" id="iinicio"  placeholder="Digite um número">
+            </p>
+            <p>
+                <label for="ifim">Fim:</label>
+                <input type="number" name="fim" id="ifim" placeholder="Digite um número">
+            </p>
+            <p>
+                <label for="ipasso">Passo:</label>
+                <input type="number" name="passo" id="ipasso" placeholder="Digite um número">
+            </p>
+
+            <p>
+                <input type="button" value="Contar" class="contar" onclick="contar()">
+            </p>
+        </div>
+
+        <div id="res">
+            <p>Preparando Contagem...</p>
+        </div>
+    </main>
+
+    <footer>Criado por william Codess</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
