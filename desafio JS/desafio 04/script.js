@@ -5,16 +5,29 @@ function contar() {
     var pass = document.querySelector('#ipasso')
 
 
-    if (ini.value.length == 0 || ini.value.length < 0 || fim.value.length == 0 || fim.value.length < 0 || pass.value.length == 0 || pass.value.length < 0) {
+    if (ini.value.length == 0 || fim.value.length == 0 || pass.value.length == 0) {
         window.alert('[ERRO] Verifique os números informados')
+        res.innerHTML = `Impossível contar.`
     } else {
-        res.innerHTML = `Contando: `
+        res.innerHTML = `Contando: <br>`
         let ii = Number(ini.value)
         let ff = Number(fim.value)
         let pp = Number(pass.value)
 
-        for(let cal = ii; cal <= ff; cal += pp) {
-            res.innerHTML += `${cal} `
+        if (pp <= 0){
+            alert('"Passo" inválido, considerando passo "1"')
+            pp = 1
         }
+
+        if (ii < ff) {
+        for(let cal = ii; cal <= ff; cal += pp) {
+            res.innerHTML += `${cal}  \u{1F449}`
+            }
+        } else {
+            for(let cal = ii; cal >= ff; cal -= pp) {
+                res.innerHTML += `${cal} \u{1F449}`
+            }
+        }
+            res.innerHTML += `\u{1F3C1}`
     }
 }
