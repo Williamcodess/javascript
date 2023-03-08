@@ -3,6 +3,7 @@ function contar() {
     var fim = document.getElementById('ifim')
     var res = document.getElementById('res')
     var pass = document.querySelector('#ipasso')
+    var menu = document.getElementById('menu')
 
 
     if (ini.value.length == 0 || fim.value.length == 0 || pass.value.length == 0) {
@@ -29,5 +30,7 @@ function contar() {
             }
         }
             res.innerHTML += `\u{1F3C1}`
+            res.style.backgroundColor = 'rgba(255, 255, 255, 0.829)'
+            menu.style.boxShadow = '2px -75px 10px rgba(0, 0, 0, 0.9)'
     }
 }
