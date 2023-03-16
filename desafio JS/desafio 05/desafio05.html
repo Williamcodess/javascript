@@ -5,65 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Tabuada</title>
-    <style>
-        *{
-            margin: 0px;
-            padding:0px;
-        }
-
-        body,html{
-            height: 100vh;
-            width: 100vw;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            background: black url('https://images.pexels.com/photos/355915/pexels-photo-355915.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center center;
-            background-size: cover;
-        }
-
-        header>h1{
-            padding-top: 70px;
-            padding-bottom: 20px;
-            font-size: 5em;
-            color: white;
-            text-align: center;
-        }
-
-        section{
-            height: 410px;
-            width: 710px;
-            padding: 10px;
-            margin: auto;
-            background-color: rgba(19, 19, 194, 0.699);
-            border-radius: 100px 0px;
-        }
-
-        label{
-            margin-left: 60px;
-            font-size: 2em;
-        }
-
-        input{
-            margin-top: 20px;
-            height: 30px;
-            padding-top:10px;
-            font-size: 1.5em;
-            width: 240px;
-        }
-        
-        .botao{
-            width: 150px;
-            font-size: 1.1em;
-            font-weight: bold;
-            padding: 5px;
-        }
-
-        textarea{
-            margin-top: 20px;
-            margin-left: 10px;
-            height: 280px;
-            width: 350px;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
@@ -75,15 +17,15 @@
             <label for="inum">Número:</label>
             <input type="number" name="num" id="inum" placeholder="Digite um número" >
 
-            <input type="button" value="Gerar tabuada" class="botao">
+            <input type="button" value="Gerar tabuada" class="botao" onclick="gerar()" id="gerar">
         </p>
 
-        <p>
-            <textarea name="" id="" cols="30" rows="10">
-                Aqui vai aparecer sua tabuada
-            </textarea>
-        </p>
+        <div id="res">
+            <!--Aqui vai a tabuada-->
+        </div>
         
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
