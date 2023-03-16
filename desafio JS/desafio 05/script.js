@@ -1,14 +1,19 @@
-function gerar() {
-    var num = document.getElementById('inum')
-    var resp = document.getElementById('res')
-    var gera = document.getElementById('gerar')
+function tabuada() {
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
 
-    var tabuada = Number(num.value)
-    var one = 10
+    if (num.value.length == 0) {
+        window.alert('Digite um número')
+    } else {
+        let numerador = Number(num.value)
+        let denominador = 1
 
-    if ( tabuada == 1 ){
-    while (tabuada <= 10) {
-        resp.innerHTML = `${tabuada} X 1 =`
-    }
+        while (denominador <= 10) {
+            let item = document.createElement('option')
+            item.text = `${numerador} x ${denominador} = ${numerador*denominador}`
+            item.value = `tab${denominador}`
+            tab.appendChild(item)
+            denominador++
+        }
     }
 }
